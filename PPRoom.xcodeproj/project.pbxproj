@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3037BF1D41037C8F675611DD /* Pods_PPRoom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F2C04B3EBA28F6D99E85EE /* Pods_PPRoom.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		40F2C04B3EBA28F6D99E85EE /* Pods_PPRoom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPRoom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		945212DA4CA0F08EF4CF1B7D /* Pods-PPRoom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPRoom.release.xcconfig"; path = "Target Support Files/Pods-PPRoom/Pods-PPRoom.release.xcconfig"; sourceTree = "<group>"; };
 		B49947EB2ED019CD00CFE93D /* PPRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD5E1F9327494ED0A6AEFD39 /* Pods-PPRoom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPRoom.debug.xcconfig"; path = "Target Support Files/Pods-PPRoom/Pods-PPRoom.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3037BF1D41037C8F675611DD /* Pods_PPRoom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54CC4249BF7C22EDE22C75A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40F2C04B3EBA28F6D99E85EE /* Pods_PPRoom.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E92A260D788E932150EFF04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD5E1F9327494ED0A6AEFD39 /* Pods-PPRoom.debug.xcconfig */,
+				945212DA4CA0F08EF4CF1B7D /* Pods-PPRoom.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B49947E22ED019CD00CFE93D = {
 			isa = PBXGroup;
 			children = (
 				B49947ED2ED019CD00CFE93D /* PPRoom */,
 				B49947EC2ED019CD00CFE93D /* Products */,
+				5E92A260D788E932150EFF04 /* Pods */,
+				54CC4249BF7C22EDE22C75A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +92,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B49947FE2ED019CE00CFE93D /* Build configuration list for PBXNativeTarget "PPRoom" */;
 			buildPhases = (
+				7A1ECE71E5D62614048DBC37 /* [CP] Check Pods Manifest.lock */,
 				B49947E72ED019CD00CFE93D /* Sources */,
 				B49947E82ED019CD00CFE93D /* Frameworks */,
 				B49947E92ED019CD00CFE93D /* Resources */,
@@ -77,8 +105,6 @@
 				B49947ED2ED019CD00CFE93D /* PPRoom */,
 			);
 			name = PPRoom;
-			packageProductDependencies = (
-			);
 			productName = PPRoom;
 			productReference = B49947EB2ED019CD00CFE93D /* PPRoom.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +153,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7A1ECE71E5D62614048DBC37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PPRoom-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B49947E72ED019CD00CFE93D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +191,7 @@
 /* Begin XCBuildConfiguration section */
 		B49947FF2ED019CE00CFE93D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD5E1F9327494ED0A6AEFD39 /* Pods-PPRoom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -167,6 +219,7 @@
 		};
 		B49948002ED019CE00CFE93D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 945212DA4CA0F08EF4CF1B7D /* Pods-PPRoom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -14,6 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // 运行权限系统测试（在后台线程）
+        DispatchQueue.global(qos: .background).async {
+            PermissionTests.runAllTests()
+        }
+        
         return true
     }
 
